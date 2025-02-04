@@ -1,14 +1,13 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
 import { About } from "./about/components/About";
 import "./index.css";
+import { Links } from "./links/components/Links";
 
 function App() {
 	return (
 		<main className="container">
-			<Routes>
-				<Route path="*" element={<About/>}/>
-			</Routes>
+			<About/>
+			<Links/>
 		</main>
 	);
 };
