@@ -1,0 +1,62 @@
+.projects{
+    margin-bottom: 5rem;
+    & .heading{
+        overflow: hidden;
+        & h2{
+            font-family: Rammetto One;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0;
+            transform: translate3d(0px, 0%, 0px);
+            margin: 0 0 .5rem; 
+        }
+    }
+
+    & .project-list{
+        position: relative;
+        z-index: 1;
+        cursor: grab;
+        pointer-events: all;
+        overflow-x: auto;
+        overflow-y: none;
+        padding: 1.35rem 0;
+        
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        & .project-list-inner{
+            transform: translate3d(0px, 0px, 0px);
+            white-space: nowrap;
+            will-change: transform;
+            display: inline-block;
+            position: relative; /* Ensure items can be layered above */
+
+            & .project-item{
+                border: 0;
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 1rem;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                white-space: normal;
+                background-color: transparent;
+
+                img {
+                    width: 300px;
+                    height: 400px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+              
+                &:hover {
+                    transform: scale(1.05);
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}
