@@ -1,16 +1,35 @@
 import React from "react";
-import { About } from "./about/components/About";
 import "./index.css";
-import { Links } from "./links/components/Links";
-import { Projects } from "./projects/components/Projects";
+import { ProjectDetails } from "./projects/components/ProjectDetails";
+import { Route, Routes } from "react-router-dom";
+import { Homepage } from "./Homepage";
+
+const projects = [
+	{
+		id: 0,
+		title: 'OPTIK Consultancy | Opn.Systems',
+		img: "./images/opnsystems.jpg"
+	},
+	{
+		id: 1,
+		title: 'CTV',
+		img: "./images/ctv.jpg"
+	},
+	{
+		id: 2,
+		title: 'Course Enrolment and Recommendation',
+		img: "./images/course.png"
+	},
+]
 
 function App() {
 	return (
-		<main className="container">
-			<About/>
-			<Links/>
-			<Projects/>
-		</main>
+		<Routes>
+			<Route path = "*" element={<Homepage projects = {projects} />} />
+			{projects.map(project => (
+				<Route key={project.id} path={`/${project.title.replace(/ /g, "-")}`} element={<ProjectDetails project = {project}/>} />
+			))}
+		</Routes>
 	);
 };
 

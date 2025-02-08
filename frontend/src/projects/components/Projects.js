@@ -1,24 +1,8 @@
 import React from "react";
 import "../style/projects.css";
+import { useNavigate } from "react-router-dom";
 
-export const Projects = _ => {
-    const projects = [
-        {
-            id: 0,
-            title: 'OPTIK Consultancy | Opn.Systems',
-            img: "./images/opnsystems.jpg"
-        },
-        {
-            id: 1,
-            title: 'CTV',
-            img: "./images/ctv.jpg"
-        },
-        {
-            id: 2,
-            title: 'Course Enrolment and Recommendation',
-            img: "./images/course.png"
-        },
-    ]
+export const Projects = (props) => {
     return(
         <section className="projects">
             <div className="heading">
@@ -26,7 +10,7 @@ export const Projects = _ => {
             </div>
             <div className="project-list">
                 <div className="project-list-inner">
-                    {projects.map(project => (
+                    {props.projects.map(project => (
                         <ProjectItem key={project.id} project = {project} />
                     ))}
                 </div>
@@ -36,8 +20,12 @@ export const Projects = _ => {
 };
 
 const ProjectItem = (props) => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/${props.project.title.replace(/ /g, "-")}`);
+    };
     return(
-        <button className="project-item">
+        <button className="project-item" onClick={handleClick}>
             <img src={props.project.img} alt="wallpaper"/>
         </button>
     );
