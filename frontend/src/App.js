@@ -8,17 +8,23 @@ const projects = [
 	{
 		id: 0,
 		title: 'OPTIK Consultancy | Opn.Systems',
-		img: "./images/opnsystems.jpg"
+		img: "./images/opnsystems.jpg",
+		desc: "",
+		details: ""
 	},
 	{
 		id: 1,
 		title: 'CTV',
-		img: "./images/ctv.jpg"
+		img: "./images/ctv.jpg",
+		desc: "",
+		details: ""
 	},
 	{
 		id: 2,
 		title: 'Course Enrolment and Recommendation',
-		img: "./images/course.png"
+		img: "./images/course.png",
+		desc: "",
+		details: ""
 	},
 ]
 

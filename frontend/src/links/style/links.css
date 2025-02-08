@@ -25,22 +25,11 @@ li {
   opacity: 1;
   transform: translateY(0%) scale(1);
 }
-.social-links .social-anchor .social-icon-hover {
-  background-color: #5e5e5e;
-  border-radius: 50%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: scale(0.5);
-  opacity: 0;
-}
 .social-links .social-anchor:hover {
   outline: 0;
   color: rgb(255, 255, 255);
 }
-.social-links .social-anchor:hover .social-icon-hover {
+.social-links .social-anchor:hover .icon-hover {
   transform: scale(1.25);
   opacity: 1;
 }
@@ -49,11 +38,4 @@ li {
   height: 2.25rem;
   width: 2.25rem;
   z-index: 1;
-}
-.social-links .social-anchor .u-visually-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
 }/*# sourceMappingURL=links.css.map */

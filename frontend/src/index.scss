@@ -13,3 +13,52 @@ h1 {
     margin: 0 auto;
     max-width: 60rem;
 }
+
+.icon-hover{
+    background-color: #5e5e5e;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0.5);
+    opacity: 0;
+}
+.u-visually-hidden{
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.bck-btn{
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &:hover{
+        outline: 0;
+        color: rgb(255, 255, 255);
+        cursor: grab;
+        & .icon-hover{
+            transform: scale(1.25);
+            opacity: 1;
+        }
+    }
+
+    & svg{
+        width: 2.5rem;
+        height: 2.5rem;
+        z-index: 1;
+    }
+}
